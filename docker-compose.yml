@@ -10,7 +10,7 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
-  ${URL_SITE}:
+  wordpress:
     container_name: ${URL_SITE}
     image: luizeof/dockerpress:latest
     working_dir: /var/www/html
