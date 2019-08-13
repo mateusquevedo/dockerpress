@@ -4,7 +4,7 @@ services:
   db:
     image: mysql:5.7
     volumes:
-      - ${URL_SITE}_db:/var/lib/mysql
+      - ${MYSQL_DATABASE}_db:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
@@ -13,11 +13,11 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
   wordpress:
-    container_name: ${URL_SITE}
+    container_name: ${MYSQL_DATABASE}
     image: luizeof/dockerpress:latest
     working_dir: /var/www/html
     volumes:
-      - ${URL_SITE}_files:/var/www/html
+      - ${MYSQL_DATABASE}_files:/var/www/html
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
@@ -30,5 +30,5 @@ services:
       LETSENCRYPT_EMAIL: suporte@agenciamobidick.com.br
 
 volumes:
-  ${URL_SITE}_db:
-  ${URL_SITE}_files:
+  ${MYSQL_DATABASE}_db:
+  ${MYSQL_DATABASE}_files:
