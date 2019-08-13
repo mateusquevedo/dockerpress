@@ -28,7 +28,3 @@ services:
       VIRTUAL_HOST: ${URL_SITE}
       LETSENCRYPT_HOST: ${URL_SITE}
       LETSENCRYPT_EMAIL: suporte@agenciamobidick.com.br
-
-volumes:
-  banco:
-  arquivos:
