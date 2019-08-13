@@ -20,11 +20,11 @@ services:
       - arquivos:/var/www/html
     restart: always
     environment:
-      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_HOST: 104.207.147.11
       WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
       WORDPRESS_DB_USER: ${MYSQL_USER}
       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}  
-      WP_REDIS_HOST: db
+      WP_REDIS_HOST: 104.207.147.11
       VIRTUAL_HOST: ${URL_SITE}
       LETSENCRYPT_HOST: ${URL_SITE}
       LETSENCRYPT_EMAIL: suporte@agenciamobidick.com.br
