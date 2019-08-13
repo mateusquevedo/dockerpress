@@ -30,5 +30,5 @@ services:
       LETSENCRYPT_EMAIL: suporte@agenciamobidick.com.br
 
 volumes:
-  ${MYSQL_DATABASE}_db:
-  ${MYSQL_DATABASE}_files:
+  - ${MYSQL_DATABASE}_db:
+  - ${MYSQL_DATABASE}_files:
